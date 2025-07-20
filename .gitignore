@@ -13,3 +13,8 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# IDE files - should not be in version control
+.idea/
+*.iws
+*.ipr
