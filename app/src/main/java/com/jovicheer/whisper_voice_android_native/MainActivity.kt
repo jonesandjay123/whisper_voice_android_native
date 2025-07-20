@@ -7,7 +7,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.Build
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.content.Context.RECEIVER_NOT_EXPORTED
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             registerReceiver(inputRequestReceiver, filter, RECEIVER_NOT_EXPORTED)
         } else {
+            @Suppress("DEPRECATION")
             registerReceiver(inputRequestReceiver, filter)
         }
     }
