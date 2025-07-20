@@ -10,10 +10,12 @@
         android:id="@+id/input_field"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/enter_something"
-        android:imeOptions="actionDone"
+        android:hint="Enter something…"
+        android:inputType="text"
+        android:autofillHints="username"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
